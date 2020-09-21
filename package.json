@@ -36,5 +36,9 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "save": "^2.4.0"
   }
 }
