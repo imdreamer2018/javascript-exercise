@@ -1,13 +1,19 @@
 function fetchData(url) {
   // <-- start
   // TODO 23: 通过Fetch API实现异步请求
+  return fetch(url).then(response => {
+    if (response.status === 200) {
+      return response.json();
+    }
+    return Promise.reject(response.status);
+  });
   // end -->
 }
 
-const URL = 'http://localhost:3000/api';
+const URL = 'http://localhost:8080/rs/lists';
 fetchData(URL)
   .then(result => {
-    document.writeln(result.name);
+    document.writeln(result.message);
   })
   .catch(error => {
     console.error(error);
