@@ -19,10 +19,10 @@ function fetchData(url) {
   });
 }
 
-const URL = 'http://localhost:8080/rs/lists';
+const URL = 'http://localhost:3000/api';
 fetchData(URL)
   .then(result => {
-    document.writeln(JSON.parse(result).message);
+    document.writeln(JSON.parse(result).name);
   })
   .catch(error => {
     console.error(error);

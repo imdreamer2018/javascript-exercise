@@ -10,10 +10,10 @@ function fetchData(url) {
   // end -->
 }
 
-const URL = 'http://localhost:8080/rs/lists';
+const URL = 'http://localhost:3000/api';
 fetchData(URL)
   .then(result => {
-    document.writeln(result.message);
+    document.writeln(result.name);
   })
   .catch(error => {
     console.error(error);
