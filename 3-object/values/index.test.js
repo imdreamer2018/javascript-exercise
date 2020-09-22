@@ -8,5 +8,5 @@ test('统计所有类型的数量', () => {
   };
 
   const result = countTypesNumber(types);
-  expect(result).toBe(12);
+  expect(result).toBe(13);
 });
